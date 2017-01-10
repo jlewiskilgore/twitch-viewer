@@ -26,6 +26,13 @@ body {
 	background-color: #6441a5;
 }
 
+.well {
+	background: white;
+	color: #6441a5;
+	padding: 50px 50px 50px 50px;
+	text-align: center;
+}
+
 #footer {
    position:fixed;
    left:0px;
