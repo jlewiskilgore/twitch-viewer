@@ -1,0 +1,45 @@
+h1 {
+	font-family: "Bowlby One SC";
+	font-size: 48px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 26.4px;
+	color: white;
+}
+
+input {
+	background-color: #6441a5;
+	border-color: white;
+	color: white;
+	align: center;
+}
+
+body {
+	font-family: "Bowlby One SC";
+	font-size: 16px;
+	font-style: normal;
+	font-variant: normal;
+	line-height: 26.4px;
+	color: white;
+	font-weight: 400;
+	background-color: #6441a5;
+}
+
+#footer {
+   position:fixed;
+   left:0px;
+   bottom:0px;
+   height:auto;
+   width:100%;
+   text-align: center;
+   background: #6441a5;
+   color: white;
+   padding: 15px 5px 15px 10px;
+}
+
+#footer a {
+	color: white;
+	font-size: 32px;
+	padding: 20px;
+}
