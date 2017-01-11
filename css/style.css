@@ -26,6 +26,11 @@ body {
 	background-color: #6441a5;
 }
 
+input{
+	background-color: white;
+	color: #6441a5;
+}
+
 .well {
 	background: white;
 	color: #6441a5;
