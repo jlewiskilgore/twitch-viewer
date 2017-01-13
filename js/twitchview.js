@@ -55,8 +55,32 @@ function refreshResults() {
 	}
 }
 
- $(document).ajaxStop(function () {
-      console.log(onlineChannels);
-      console.log(offlineChannels);
-      console.log(dneChannels);
-  });
+function updateResults() {
+	var i;
+	//Update Online Streams
+	onlineStreams = document.getElementById("online");
+	onlineStreams.innerHTML = "<h2><u>ONLINE STREAMS</u></h2>";
+	for(i=0; i<onlineChannels.length; i++) {
+		onlineStreams.innerHTML += "<p>"+onlineChannels[i].stream.channel.name+"</p>";
+	}
+	//Update Offline Streams
+	offlineStreams = document.getElementById("offline");
+	offlineStreams.innerHTML = "<h2><u>OFFLINE STREAMS</u></h2>";
+	for(i=0; i<offlineChannels.length; i++) {
+		offlineStreams.innerHTML += "<p>"+offlineChannels[i].name+"</p>";
+	}
+	//Update DNE (Does Not Exist) Streams
+	dneStreams = document.getElementById("dne");
+	dneStreams.innerHTML = "<h2><u>CHANNELS DO NOT EXIST</u></h2>";
+	for(i=0; i<dneChannels.length; i++) {
+		dneStreams.innerHTML += "<p>"+dneChannels[i].message+"</p>";
+	}
+}
+
+$(document).ajaxStop(function () {
+    console.log(onlineChannels);
+    console.log(offlineChannels);
+    console.log(dneChannels);
+
+    updateResults();
+});
