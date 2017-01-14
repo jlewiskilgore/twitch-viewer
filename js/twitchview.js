@@ -1,6 +1,7 @@
-var onlineChannels = [];
-var offlineChannels = [];
-var dneChannels = [];
+$(document).ready(function(){
+	refreshResults();
+
+});
 
 function getStream(channel) {
 
