@@ -38,6 +38,22 @@ input{
 	text-align: center;
 }
 
+#online div {
+	background: green;
+}
+
+#offline div {
+	background: red;
+}
+
+#online div a {
+	color: white;
+}
+
+#offline div a {
+	color: white;
+}
+
 #footer {
    position:fixed;
    left:0px;

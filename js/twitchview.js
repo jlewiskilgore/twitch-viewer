@@ -62,19 +62,19 @@ function updateResults() {
 	onlineStreams = document.getElementById("online");
 	onlineStreams.innerHTML = "<h2><u>ONLINE STREAMS</u></h2>";
 	for(i=0; i<onlineChannels.length; i++) {
-		onlineStreams.innerHTML += "<p>"+onlineChannels[i].stream.channel.name+"</p>";
+		onlineStreams.innerHTML += "<div><a href='"+onlineChannels[i].stream.channel.url+"' target='_blank'><p>"+onlineChannels[i].stream.channel.name+"</p></a></div>";
 	}
 	//Update Offline Streams
 	offlineStreams = document.getElementById("offline");
 	offlineStreams.innerHTML = "<h2><u>OFFLINE STREAMS</u></h2>";
 	for(i=0; i<offlineChannels.length; i++) {
-		offlineStreams.innerHTML += "<p>"+offlineChannels[i].name+"</p>";
+		offlineStreams.innerHTML += "<div><a href='"+offlineChannels[i].url+"' target='_blank'><p>"+offlineChannels[i].name+"</p></a></div>";
 	}
 	//Update DNE (Does Not Exist) Streams
 	dneStreams = document.getElementById("dne");
 	dneStreams.innerHTML = "<h2><u>CHANNELS DO NOT EXIST</u></h2>";
 	for(i=0; i<dneChannels.length; i++) {
-		dneStreams.innerHTML += "<p>"+dneChannels[i].message+"</p>";
+		dneStreams.innerHTML += "<div><p>"+dneChannels[i].message+"</p></div>";
 	}
 }
 
