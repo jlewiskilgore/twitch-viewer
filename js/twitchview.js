@@ -49,7 +49,7 @@ function refreshResults() {
 	offlineChannels = [];
 	dneChannels = [];
 
-	var channels = ["freecodecamp", "gamesdonequick","storbeck", "habathcx", "RobotCaleb", "noobs2ninjas", "brunofin"];
+	var channels = ["freecodecamp", "gamesdonequick","storbeck", "habathcx", "RobotCaleb", "noobs2ninjas", "brunofin", "shmellyorc"];
 	
 	for(var i=0; i<channels.length; i++) {
 		getStream(channels[i]);
@@ -62,7 +62,7 @@ function updateResults() {
 	onlineStreams = document.getElementById("online");
 	onlineStreams.innerHTML = "<h2><u>ONLINE STREAMS</u></h2>";
 	for(i=0; i<onlineChannels.length; i++) {
-		onlineStreams.innerHTML += "<div><a href='"+onlineChannels[i].stream.channel.url+"' target='_blank'><p>"+onlineChannels[i].stream.channel.name+"</p></a></div>";
+		onlineStreams.innerHTML += "<div><a href='"+onlineChannels[i].stream.channel.url+"' target='_blank'><p>"+onlineChannels[i].stream.channel.name+"<br>Currently Playing:<br>"+onlineChannels[i].stream.channel.status+"</p></a></div>";
 	}
 	//Update Offline Streams
 	offlineStreams = document.getElementById("offline");
